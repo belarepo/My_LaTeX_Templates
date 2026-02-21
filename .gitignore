@@ -1,0 +1,13 @@
+# Ignore everything
+*
+# Add .gitignore
+!.gitignore
+
+# Do not ignore directories (so Git can traverse them)
+!*/
+
+# Do not ignore .tex files
+!*.tex
+
+# Add a latex cheat sheet
+!latexsheet-a4.pdf
