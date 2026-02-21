@@ -1,0 +1,99 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
+
+\documentclass[%
+10pt,               % only 10pt, 11pt or 12pt are allowed in this template
+a4paper,
+twoside             % oneside / twoside
+]{article}
+% ───────────────────────────────────────────────────────────────
+% Recommended alternatives:
+%   report    → has \chapter, no \part
+%   scrreprt  → KOMA-Script (better control & typography)
+%   scrbook   → has \part and \chapter
+% ───────────────────────────────────────────────────────────────
+
+% Page layout
+\usepackage[%
+inner=3.0cm,        % larger inner margin for binding
+outer=2.2cm,
+top=2.5cm,
+bottom=3.0cm,
+includehead,
+includefoot,
+heightrounded
+]{geometry}
+
+% ───────────────────────────────────────────────────────────────
+% Essential packages (before xepersian)
+% ───────────────────────────────────────────────────────────────
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+% ───────────────────────────────────────────────────────────────
+% xepersian MUST be the LAST package
+% ───────────────────────────────────────────────────────────────
+\usepackage{xepersian}
+
+\settextfont{IRNazanin}         % or Vazirmatn, XB Niloofar, B Nazanin, ...
+%\DefaultMathsDigitsfalse        % Persian digits in math (recommended)
+
+% ───────────────────────────────────────────────────────────────
+% Document information
+% ───────────────────────────────────────────────────────────────
+\title{عنوان سند}
+\author{نام شما}
+\date{\today}
+
+% ───────────────────────────────────────────────────────────────
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		چکیده فارسی این سند.
+		
+		\lr{English abstract goes here.}
+	\end{abstract}
+	
+	% ───────────────────────────────────────────────────────────────
+	% Main content – all English wrapped in \lr{...}
+	% ───────────────────────────────────────────────────────────────
+	
+	این یک پاراگراف نمونه به زبان فارسی است.
+	
+	\lr{You can insert English text using \lr like this} داخل پاراگراف فارسی.
+	
+	یا بهتر است انگلیسی را در خط جداگانه بنویسید:
+	
+	\lr{This is much clearer when bidirectional text is on separate lines.}
+	
+	
+	\begin{multicols}{3}
+		
+		این بخش به صورت سه ستون نمایش داده می‌شود.
+		
+		این روش برای مراجع، جداول طولانی، فهرست‌ها یا توضیحات فشرده بسیار مناسب است.
+		
+		\lr{This is an English paragraph inside columns.}
+		
+		\lr{Mixing both languages is still possible.}
+		
+		\begin{itemize}
+			\item مورد اول
+			\item \lr{Second item}
+			\item مورد سوم
+			\item \lr{Fourth item}
+		\end{itemize}
+		
+		\begin{equation*}
+			\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+		\end{equation*}
+		
+		می‌توانید فرمول، لیست، جدول و شکل را هم داخل محیط چندستونی قرار دهید.
+		
+	\end{multicols}
+	
+\end{document}
